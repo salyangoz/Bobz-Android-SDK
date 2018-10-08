@@ -1,0 +1,56 @@
+<resources>
+
+    <style name="Bobz" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#656513</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="Bobz.Popup">
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:paddingBottom">32dp</item>
+        <item name="android:paddingTop">32dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="Bobz.Title">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Bobz.Subtitle">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Bobz.Description">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Bobz.Button">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Bobz.Button.Milkyway">
+        <item name="android:background">@drawable/round_shape</item>
+    </style>
+
+
+    <style name="Bobz.Image"></style>
+
+</resources>
