@@ -1,27 +1,28 @@
-package android.io.bobz.library.popup.v1.templates.twobuttons;
+package android.io.bobz.library.popup.v1.templates.socialfollow;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.io.bobz.library.R;
 import android.io.bobz.library.api.model.Background;
 import android.io.bobz.library.api.model.Popup;
+import android.io.bobz.library.api.model.type.social.SocialPlatform;
+import android.io.bobz.library.popup.v1.enums.SocialMedia;
 import android.io.bobz.library.popup.v1.listener.ButtonClicked;
-import android.io.bobz.library.popup.v1.view.ButtonDrawable;
 import android.io.bobz.library.popup.v1.view.LayoutDrawable;
 import android.io.bobz.library.popup.window.PopupWindow;
 import android.io.bobz.library.popup.window.PopupWindowBuilder;
 import android.net.Uri;
+import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 
-public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListener {
+public class Iok1<T extends PopupWindow> implements View.OnClickListener {
 
     private Popup popup;
     private Context context;
@@ -29,11 +30,11 @@ public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListen
     private PopupWindowBuilder builder;
 
     //View Components
-    private Button firstButton, secondButton;
+    private AppCompatImageButton facebook, instagram, twitter, linkedin, youtube;
     private LinearLayout layout;
-    private AppCompatTextView subtitle, description;
+    private AppCompatTextView subtitle;
 
-    public CosmoRedShift7(Context context, Popup popup) {
+    public Iok1(Context context, Popup popup) {
 
         this.context = context;
         this.popup = popup;
@@ -43,11 +44,10 @@ public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListen
 
         //Popup Window Builder
         PopupWindowBuilder popupWindowBuilder = new PopupWindowBuilder(context)
-                .setContentView(R.layout.popup_blackeye)
+                .setContentView(R.layout.popup_iok1)
                 .bindClickListener(this, R.id.button1)
-                .bindClickListener(this, R.id.button2)
-                .setDismissOnTouchBackground(false)
-                .setGravity(Gravity.CENTER);
+                .setDismissOnTouchBackground(true)
+                .setGravity(Gravity.BOTTOM);
 
         this.builder = popupWindowBuilder;
 
@@ -101,10 +101,12 @@ public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListen
         View view = builder.mContentView;
 
         layout = (LinearLayout) view.findViewById(R.id.layout);
-        firstButton = (Button) view.findViewById(R.id.button1);
-        secondButton = (Button) view.findViewById(R.id.button2);
+        facebook = (AppCompatImageButton) view.findViewById(R.id.socialPlatform1);
+        instagram = (AppCompatImageButton) view.findViewById(R.id.socialPlatform2);
+        twitter = (AppCompatImageButton) view.findViewById(R.id.socialPlatform3);
+        linkedin = (AppCompatImageButton) view.findViewById(R.id.socialPlatform4);
+        youtube = (AppCompatImageButton) view.findViewById(R.id.socialPlatform5);
         subtitle = (AppCompatTextView) view.findViewById(R.id.subtitle);
-        description = (AppCompatTextView) view.findViewById(R.id.description);
 
     }
 
@@ -114,10 +116,6 @@ public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListen
         subtitle.setText(popup.options.subtitle);
         subtitle.setTextColor(Color.parseColor(popup.options.subtitleColor));
 
-        //Description Textview Options
-        description.setText(popup.options.description);
-        description.setTextColor(Color.parseColor(popup.options.descriptionColor));
-
         //Popup Overlay Color
         window.setBackgroundColor(Color.parseColor(popup.options.overlayColor));
 
@@ -125,22 +123,37 @@ public class CosmoRedShift7<T extends PopupWindow> implements View.OnClickListen
         Background background = popup.options.background;
 
         if (!background.color.isEmpty())
-            layout.setBackgroundDrawable(LayoutDrawable.rounded(background.color));
+            layout.setBackgroundDrawable(LayoutDrawable.topRound(background.color));
 
         //Window outside popup Layer Background
         if (!popup.options.overlayColor.isEmpty())
             window.setBackgroundColor(Color.parseColor(popup.options.overlayColor));
 
-        //First Button Options
-        firstButton.setText(popup.options.buttons.get(0).title);
-        firstButton.setTextColor(Color.parseColor(popup.options.buttons.get(0).titleColor));
-        firstButton.setBackgroundDrawable(ButtonDrawable.rounded(popup.options.buttons.get(0).backgroundColor));
+        //Social Platforms:
+        for (SocialPlatform socialPlatform : popup.options.socialFollow.socialPlatforms) {
 
-        //Second Button Options
-        secondButton.setText(popup.options.buttons.get(1).title);
-        secondButton.setTextColor(Color.parseColor(popup.options.buttons.get(1).titleColor));
-        secondButton.setBackgroundDrawable(ButtonDrawable.rounded(popup.options.buttons.get(1).backgroundColor));
+            SocialMedia media = SocialMedia.valueOf(socialPlatform.platform);
 
+            switch (media) {
+
+                //TODO SET LINK
+                case FACEBOOK:
+                    facebook.setVisibility(View.VISIBLE);
+                    break;
+                case INSTAGRAM:
+                    instagram.setVisibility(View.VISIBLE);
+                    break;
+                case TWITTER:
+                    twitter.setVisibility(View.VISIBLE);
+                    break;
+                case LINKEDIN:
+                    linkedin.setVisibility(View.VISIBLE);
+                    break;
+                case YOUTUBE:
+                    youtube.setVisibility(View.VISIBLE);
+                    break;
+            }
+        }
     }
 
 }

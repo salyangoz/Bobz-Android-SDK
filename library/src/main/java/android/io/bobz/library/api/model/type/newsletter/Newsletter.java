@@ -8,5 +8,9 @@ public class Newsletter {
     public String placeholder;
     @SerializedName("submit_response")
     public NewsletterResponse newsletterResponse;
+    @SerializedName("title_color")
+    public String titleColor;
+    @SerializedName("icon_color")
+    public String iconColor;
 
 }

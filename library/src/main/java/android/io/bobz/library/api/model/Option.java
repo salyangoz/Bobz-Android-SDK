@@ -1,6 +1,8 @@
 package android.io.bobz.library.api.model;
 
 import android.graphics.Color;
+import android.io.bobz.library.api.model.type.newsletter.Newsletter;
+import android.io.bobz.library.api.model.type.social.SocialFollow;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -34,5 +36,10 @@ public class Option {
     public Background background;
     @SerializedName("button")
     public List<Button> buttons;
+    @SerializedName("newsletter")
+    public Newsletter newsletter;
+    @SerializedName("social_follow")
+    public SocialFollow socialFollow;
+
 
 }

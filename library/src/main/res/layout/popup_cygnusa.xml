@@ -25,13 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="120dp"
         android:layout_weight="10"
-        tools:src="@drawable/andromeda_preview" />
+        tools:src="@drawable/cygnusa_preview" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_gravity="center"
         android:orientation="vertical"
         android:paddingLeft="38dp"
         android:paddingRight="38dp">
@@ -41,16 +40,28 @@
             style="@style/Bobz.Subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@tools:sample/lorem" />
+            tools:text="Subscribe" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/description"
             style="@style/Bobz.Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxHeight="100dp"
-            android:scrollbars="vertical"
-            tools:text="@tools:sample/lorem/random" />
+            android:maxHeight="40dp"
+            tools:textColor="@android:color/darker_gray"
+            tools:text="Get inspired idea everyday in your email" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/email"
+            style="@style/Bobz.Input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_email_black_24dp"
+            android:hint="Enter your email address"
+            android:inputType="textEmailAddress"
+            android:drawableTint="@android:color/darker_gray"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
 
         <Button
             android:id="@+id/button1"
@@ -58,7 +69,9 @@
             android:layout_height="50dp"
             android:layout_marginLeft="36dp"
             android:layout_marginRight="36dp"
-            tools:text="@tools:sample/last_names" />
+            tools:background="@android:color/holo_blue_dark"
+            tools:text="SUBSCRIBE"
+            tools:textColor="@android:color/white" />
 
     </LinearLayout>
 </LinearLayout>

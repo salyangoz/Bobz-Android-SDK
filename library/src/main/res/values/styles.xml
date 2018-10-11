@@ -42,6 +42,13 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+    <style name="Bobz.Input">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
     <style name="Bobz.Button">
         <item name="android:textColor">@android:color/black</item>
     </style>

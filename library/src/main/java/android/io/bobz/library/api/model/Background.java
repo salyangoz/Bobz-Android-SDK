@@ -11,5 +11,4 @@ public class Background {
     @SerializedName("pattern")
     public String pattern;
 
-
 }

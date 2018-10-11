@@ -51,7 +51,7 @@ public class BlackEye<T extends PopupWindow> implements View.OnClickListener {
                 .bindClickListener(this, R.id.button1)
                 .bindClickListener(this, R.id.button2)
                 .setDismissOnTouchBackground(false)
-                .setGravity(Gravity.BOTTOM);
+                .setGravity(Gravity.CENTER);
 
         this.builder = popupWindowBuilder;
 
