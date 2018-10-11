@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    style="@style/Bobz.Popup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/title"
+        style="@style/Bobz.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/cities"
+        tools:textColor="@android:color/black" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_weight="10"
+        tools:src="@drawable/milkyway_preview" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/subtitle"
+        style="@style/Bobz.Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@tools:sample/lorem"
+        tools:textColor="@android:color/holo_red_dark" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/description"
+        style="@style/Bobz.Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxHeight="100dp"
+        android:scrollbars="vertical"
+        tools:text="@tools:sample/lorem/random" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:text="@tools:sample/last_names" />
+
+</LinearLayout>

@@ -16,6 +16,9 @@ import org.greenrobot.eventbus.ThreadMode;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final static String PROJECT_ID = "PROJECT-ID";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Bobz.with(MainActivity.this).build();
+                Bobz.with(MainActivity.this).build(PROJECT_ID);
 
             }
         }, 2000);
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe
     public void onButtonClicked(ButtonClicked buttonClicked) {
 
-        Log.i("Event","Main Activity Event Subscribed");
+        Log.i("Event", "Main Activity Event Subscribed");
         Toast.makeText(MainActivity.this, buttonClicked.getData(), Toast.LENGTH_SHORT).show();
 
     }

@@ -16,9 +16,9 @@ public class BobzBuilder {
         this.context = context;
     }
 
-    public Bobz build() {
+    public Bobz build(String projectId) {
 
-        return new Bobz(context);
+        return new Bobz(context,projectId);
     }
 
 }

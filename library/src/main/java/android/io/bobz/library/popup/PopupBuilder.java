@@ -5,16 +5,17 @@ import android.content.Context;
 public class PopupBuilder<T extends Popup> {
 
     private Context context;
-    private String templateName;
+    private String projectId;
 
-    public PopupBuilder(Context context) {
+    public PopupBuilder(Context context, String projectId) {
 
         this.context = context;
+        this.projectId = projectId;
     }
 
     protected T createPopup() {
 
-        return (T) new Popup(context);
+        return (T) new Popup(context, projectId);
     }
 
     public T build() {

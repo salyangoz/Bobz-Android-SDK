@@ -20,10 +20,12 @@ import java.util.Arrays;
 public class Bobz {
 
     private Context context;
+    private String projectId;
 
-    public Bobz(Context context) {
+    public Bobz(Context context, String projectId) {
 
         this.context = context;
+        this.projectId = projectId;
         callPopup();
 
     }
@@ -35,7 +37,7 @@ public class Bobz {
 
     public void callPopup() {
 
-        new PopupBuilder<>(context)
+        new PopupBuilder<>(context, projectId)
                 .build()
                 .show();
     }

@@ -11,10 +11,12 @@ import retrofit2.Response;
 public class Popup implements Callback<android.io.bobz.library.api.model.Popup> {
 
     private Context context;
+    private String projectId;
 
-    public Popup(Context context) {
+    public Popup(Context context, String projectId) {
 
         this.context = context;
+        this.projectId = projectId;
     }
 
     public void show() {
@@ -26,16 +28,14 @@ public class Popup implements Callback<android.io.bobz.library.api.model.Popup> 
 
         WebService
                 .getInstance(context)
-                .popup()
+                .popup(projectId)
                 .enqueue(this);
 
-        TemplateBuilder temp = new TemplateBuilder("MILKYWAY", context);
-        temp.build().show();
     }
 
     public void createPopup(android.io.bobz.library.api.model.Popup popup) {
 
-        TemplateBuilder temp = new TemplateBuilder(popup.getName(), context);
+        TemplateBuilder temp = new TemplateBuilder(popup.options.template.type, context, popup);
         temp.build().show();
     }
 

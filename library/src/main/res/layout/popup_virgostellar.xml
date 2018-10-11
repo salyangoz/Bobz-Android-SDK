@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    tools:background="#FFA4D5">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        tools:src="@drawable/virgostellar_preview" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/subtitle"
+            style="@style/Bobz.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:scrollbars="vertical"
+            tools:text="@tools:sample/full_names"
+            tools:textColor="#FF86C7" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/description"
+            style="@style/Bobz.Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="60dp"
+            android:scrollbars="vertical"
+            tools:text="@tools:sample/lorem/random"
+            tools:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="38dp"
+        android:paddingRight="38dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="0.5"
+            tools:background="#FF86C7"
+            tools:text="@tools:sample/last_names"
+            tools:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0.5"
+            tools:background="@android:color/white"
+            tools:text="@tools:sample/full_names"
+            tools:textColor="#FFA4D5" />
+
+    </LinearLayout>
+
+</LinearLayout>

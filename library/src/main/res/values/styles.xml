@@ -46,11 +46,6 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
-    <style name="Bobz.Button.Milkyway">
-        <item name="android:background">@drawable/round_shape</item>
-    </style>
-
-
     <style name="Bobz.Image"></style>
 
 </resources>
