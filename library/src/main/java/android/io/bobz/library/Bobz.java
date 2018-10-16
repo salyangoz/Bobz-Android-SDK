@@ -19,6 +19,8 @@ import java.util.Arrays;
 
 public class Bobz {
 
+    public static String TAG = "BOBZ";
+
     private Context context;
     private String projectId;
 

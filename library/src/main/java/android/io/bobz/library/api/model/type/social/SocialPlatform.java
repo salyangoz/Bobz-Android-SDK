@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class SocialPlatform {
 
-    @SerializedName("link")
-    public String link;
+    @SerializedName("url")
+    public String url;
     @SerializedName("platform")
     public String platform;
 

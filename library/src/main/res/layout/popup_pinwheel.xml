@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:background="#8F002C"
+    android:paddingTop="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            tools:src="@drawable/pinwheel_preview" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/subtitle"
+            style="@style/Bobz.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            tools:text="Rate your experience"
+            tools:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/description"
+            style="@style/Bobz.Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="60dp"
+            android:scrollbars="vertical"
+            tools:text="Please give us some rating in store. Thanks for your feedback."
+            tools:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            tools:background="#8F002C"
+            tools:text="Dismiss"
+            tools:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            tools:background="#690020"
+            tools:text="Submit"
+            tools:textColor="@android:color/white" />
+
+    </LinearLayout>
+</LinearLayout>

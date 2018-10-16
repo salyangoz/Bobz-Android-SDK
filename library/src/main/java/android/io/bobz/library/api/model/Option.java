@@ -2,7 +2,9 @@ package android.io.bobz.library.api.model;
 
 import android.graphics.Color;
 import android.io.bobz.library.api.model.type.newsletter.Newsletter;
+import android.io.bobz.library.api.model.type.rate.Rate;
 import android.io.bobz.library.api.model.type.social.SocialFollow;
+import android.io.bobz.library.api.model.type.upgrade.Upgrade;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -40,6 +42,10 @@ public class Option {
     public Newsletter newsletter;
     @SerializedName("social_follow")
     public SocialFollow socialFollow;
+    @SerializedName("rate")
+    public Rate rate;
+    @SerializedName("upgrade")
+    public Upgrade upgrade;
 
 
 }

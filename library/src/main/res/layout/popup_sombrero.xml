@@ -43,7 +43,7 @@
             style="@style/Bobz.Description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxHeight="100dp"
+            android:maxHeight="105dp"
             android:scrollbars="vertical"
             tools:text="@tools:sample/lorem/random"
             tools:textColor="@android:color/white" />

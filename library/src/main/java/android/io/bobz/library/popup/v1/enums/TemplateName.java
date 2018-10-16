@@ -13,6 +13,8 @@ public enum TemplateName {
     COSMOSREDSHIFT7,
     IOK1,
     PINWHEEL,
-    CYGNUSA
+    CYGNUSA,
+    MESSIER83,
+    BOOTES1
 
 }
