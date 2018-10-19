@@ -25,7 +25,7 @@ public class Utilities {
         return result;
     }
 
-    public static void openStore(Context context, String updateUrl) {
+    public static void openURL(Context context, String updateUrl) {
 
         final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(updateUrl));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

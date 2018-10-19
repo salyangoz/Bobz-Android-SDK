@@ -5,26 +5,15 @@ import android.net.Uri;
 
 import java.net.URI;
 
-public class ButtonClicked {
+public class DeepLink {
 
-    private String data;
     private Uri uri;
 
-    public ButtonClicked(String data, Uri uri) {
+    public DeepLink(Uri uri) {
 
-        this.data = data;
         this.uri = uri;
     }
 
-    public String getData() {
-
-        return data;
-    }
-
-    public void setData(String data) {
-
-        this.data = data;
-    }
 
     public Uri getUri() {
 

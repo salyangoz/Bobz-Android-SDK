@@ -40,7 +40,7 @@
         android:weightSum="5">
 
         <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/socialPlatform1"
+            android:id="@+id/facebook"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -49,7 +49,7 @@
             tools:visibility="visible" />
 
         <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/socialPlatform2"
+            android:id="@+id/instagram"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -58,7 +58,7 @@
             tools:visibility="visible" />
 
         <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/socialPlatform3"
+            android:id="@+id/twitter"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -67,7 +67,7 @@
             tools:visibility="visible" />
 
         <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/socialPlatform4"
+            android:id="@+id/linkedin"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -76,7 +76,7 @@
             tools:visibility="visible" />
 
         <android.support.v7.widget.AppCompatImageButton
-            android:id="@+id/socialPlatform5"
+            android:id="@+id/youtube"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"

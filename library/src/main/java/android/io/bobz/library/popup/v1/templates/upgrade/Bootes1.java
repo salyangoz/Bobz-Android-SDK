@@ -1,7 +1,6 @@
 package android.io.bobz.library.popup.v1.templates.upgrade;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.io.bobz.library.R;
@@ -12,7 +11,6 @@ import android.io.bobz.library.popup.v1.view.LayoutDrawable;
 import android.io.bobz.library.popup.window.PopupWindow;
 import android.io.bobz.library.popup.window.PopupWindowBuilder;
 import android.io.bobz.library.utils.Utilities;
-import android.net.Uri;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.TextUtils;
@@ -56,7 +54,7 @@ public class Bootes1<T extends PopupWindow> implements View.OnClickListener {
                 .setContentView(R.layout.popup_bootes1)
                 .bindClickListener(this, R.id.button1)
                 .bindClickListener(this, R.id.button2)
-                .setDismissOnTouchBackground(false)
+                .setDismissOnTouchBackground(true)
                 .setGravity(Gravity.CENTER);
 
         this.builder = popupWindowBuilder;
@@ -99,13 +97,9 @@ public class Bootes1<T extends PopupWindow> implements View.OnClickListener {
     public void onClick(View view) {
 
         int id = view.getId();
-        if (id == R.id.button1) {
-
-            //Dismiss clicked
-        } else if (id == R.id.button2) {
-
+        if (id == R.id.button2) {
             //Rate clicked
-            Utilities.openStore(this.context, popup.options.upgrade.url);
+            Utilities.openURL(this.context, popup.options.upgrade.url);
         }
 
         window.dismiss();

@@ -16,5 +16,4 @@ public enum TemplateName {
     CYGNUSA,
     MESSIER83,
     BOOTES1
-
 }

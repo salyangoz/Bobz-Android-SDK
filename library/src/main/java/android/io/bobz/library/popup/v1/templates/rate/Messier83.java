@@ -51,7 +51,7 @@ public class Messier83<T extends PopupWindow> implements View.OnClickListener {
                 .setContentView(R.layout.popup_messier83)
                 .bindClickListener(this, R.id.button1)
                 .bindClickListener(this, R.id.button2)
-                .setDismissOnTouchBackground(false)
+                .setDismissOnTouchBackground(true)
                 .setGravity(Gravity.CENTER);
 
         this.builder = popupWindowBuilder;

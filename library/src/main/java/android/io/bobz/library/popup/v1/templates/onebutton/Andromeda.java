@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.io.bobz.library.R;
 import android.io.bobz.library.api.model.Background;
 import android.io.bobz.library.api.model.Popup;
-import android.io.bobz.library.popup.v1.listener.ButtonClicked;
+import android.io.bobz.library.popup.v1.listener.DeepLink;
 import android.io.bobz.library.popup.v1.view.ButtonDrawable;
 import android.io.bobz.library.popup.v1.view.LayoutDrawable;
 import android.io.bobz.library.popup.window.PopupWindow;
@@ -14,12 +14,10 @@ import android.net.Uri;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -51,7 +49,7 @@ public class Andromeda<T extends PopupWindow> implements View.OnClickListener {
         PopupWindowBuilder popupWindowBuilder = new PopupWindowBuilder(context)
                 .setContentView(R.layout.popup_andromeda)
                 .bindClickListener(this, R.id.button1)
-                .setDismissOnTouchBackground(false)
+                .setDismissOnTouchBackground(true)
                 .setGravity(Gravity.BOTTOM);
 
         this.builder = popupWindowBuilder;
@@ -89,15 +87,8 @@ public class Andromeda<T extends PopupWindow> implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()) {
-
-            default:
-                EventBus.getDefault().post(new ButtonClicked("Test", Uri.parse("test")));
-                Log.i("Event", "Button click fired" + view.getId());
-                Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show();
-                window.dismiss();
-                break;
-        }
+        EventBus.getDefault().post(new DeepLink(Uri.parse(popup.options.buttons.get(0).url)));
+        window.dismiss();
 
     }
 

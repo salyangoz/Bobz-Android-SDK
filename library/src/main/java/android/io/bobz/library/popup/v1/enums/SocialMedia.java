@@ -7,5 +7,4 @@ public enum SocialMedia {
     LINKEDIN,
     TWITTER,
     YOUTUBE
-
 }

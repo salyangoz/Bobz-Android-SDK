@@ -51,7 +51,7 @@ public class Pinwheel<T extends PopupWindow> implements View.OnClickListener {
                 .setContentView(R.layout.popup_pinwheel)
                 .bindClickListener(this, R.id.button1)
                 .bindClickListener(this, R.id.button2)
-                .setDismissOnTouchBackground(false)
+                .setDismissOnTouchBackground(true)
                 .setGravity(Gravity.CENTER);
 
         this.builder = popupWindowBuilder;

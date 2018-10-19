@@ -7,13 +7,12 @@ import android.graphics.drawable.Drawable;
 import android.io.bobz.library.R;
 import android.io.bobz.library.api.model.Background;
 import android.io.bobz.library.api.model.Popup;
-import android.io.bobz.library.popup.v1.listener.ButtonClicked;
+import android.io.bobz.library.popup.v1.listener.DeepLink;
 import android.io.bobz.library.popup.v1.view.ButtonDrawable;
 import android.io.bobz.library.popup.v1.view.LayoutDrawable;
 import android.io.bobz.library.popup.window.PopupWindow;
 import android.io.bobz.library.popup.window.PopupWindowBuilder;
 import android.net.Uri;
-import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatImageView;
@@ -56,7 +55,7 @@ public class Cygnusa<T extends PopupWindow> implements View.OnClickListener {
         PopupWindowBuilder popupWindowBuilder = new PopupWindowBuilder(context)
                 .setContentView(R.layout.popup_cygnusa)
                 .bindClickListener(this, R.id.button1)
-                .setDismissOnTouchBackground(false)
+                .setDismissOnTouchBackground(true)
                 .setGravity(Gravity.CENTER);
 
         this.builder = popupWindowBuilder;
@@ -94,15 +93,8 @@ public class Cygnusa<T extends PopupWindow> implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()) {
-
-            default:
-                EventBus.getDefault().post(new ButtonClicked("Test", Uri.parse("test")));
-                Log.i("Event", "Button click fired" + view.getId());
-                Toast.makeText(context, "Clicked", Toast.LENGTH_SHORT).show();
-                window.dismiss();
-                break;
-        }
+        //TODO SEND DATA TO BACKEND IN ORDER TO SUBSCRIBE AFTER THAT CLOSE POPUP
+        window.dismiss();
 
     }
 
