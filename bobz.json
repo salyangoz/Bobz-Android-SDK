@@ -1,0 +1,83 @@
+{
+    "options": {
+        "platform": {
+            "ios": true,
+            "android": true
+        },
+        "template": {
+            "type": "normal|onebutton|twobuttons|newsletter|rate",
+            "id": "1|2|3",
+            "name": "unicorn|nightmare|omicron|nemesis"
+        },
+        "title": "%30 Off In Shirts",
+        "title_color": "#FFFFFF",
+        "sub_title": "Discount for Shirts",
+        "sub_title_color": "#FFFFFF",
+        "description": "The prices down. You can buy one t-shirt for 17.99$.",
+        "description_color": "#F7F7F7",
+        "close_icon_color": "#FFFFFF",
+        "image": "https://www.salyangoz.com.tr/images/salyangoz.jpg",
+		"overlay_color": "#FFFFFF",
+        "background": {
+            "color": "#000000",
+            "image": "https://www.salyangoz.com.tr/images/salyangoz.jpg",
+            "pattern": "https://www.toptal.com/designers/subtlepatterns/patterns/vertical-waves.png"
+        },
+        "button": [
+            {
+                "title": "Click to go",
+                "title_color": "#FFFFFF",
+                "bg_color": "#000000",
+                "url": "http://www.google.com",
+                "border_color": "#FFFFFF"
+            },
+            {
+                "title": "Accept",
+                "title_color": "#FFFFFF",
+                "bg_color": "#000000",
+                "url": "http://www.google.com",
+                "border_color": "#FFFFFF"
+            },
+            {
+                "title": "Decline",
+                "title_color": "#FFFFFF",
+                "bg_color": "#000000",
+                "url": "http://www.google.com",
+                "border_color": "#FFFFFF"
+            }
+        ],
+        "newsletter": {
+            "placeholder": "Enter your e-mail address here",
+            "icon_color": "#000000",
+            "title_color": "#000000",
+            "submit_response": {
+                "success_title": "E-mail address subscribed successfully.",
+                "fail_title": "Can't subscribed, try again :(."
+            }
+        },
+        "social_follow": {
+            "title": "Follow us on",
+            "social_platform": [
+                {
+                    "url": "http://www.twitter.com/salyangozco",
+                    "platform": "twitter"
+                },
+                {
+                    "url": "http://www.facebook.com/salyangozco",
+                    "platform": "facebook"
+                },
+                {
+                    "url": "http://www.instagram.com/instagram",
+					"platform": "instagram"
+                }
+            ]
+        },
+        "rate": {
+            "url": "http://www.twitter.com/salyangozco"
+        },
+        "upgrade": {
+            "version":"2.2.0",
+            "url":"http://www.salyangoz.com.tr"
+        }
+    }
+}
